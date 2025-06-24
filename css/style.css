@@ -1,4 +1,3 @@
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -23,93 +22,219 @@ body {
   justify-content: space-between;
   border-bottom: 3px solid gold;
   position: relative;
+  z-index: 1001;
 }
 
-.logo{
-    max-width: 35%;
-    display: block;
-    justify-content: left;
+.logo {
+  max-width: 35%;
 }
-.logo a img{
+
+.logo a img {
   width: 200px;
   height: auto;
 }
 
-.menu {
+/* ===== Desktop Menu ===== */
+.desktop-menu {
   list-style: none;
   display: flex;
   gap: 30px;
 }
 
-.menu li a {
+.desktop-menu li a {
   text-decoration: none;
-  color: #000;
+  color: black;
+  font-weight: 600;
   position: relative;
   padding: 5px 0;
-  font-weight: 500;
+  display: inline-block;
 }
 
-.menu li a::after {
+.desktop-menu li a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 2px;
   width: 0;
+  height: 3px;
   background-color: gold;
-  transition: width 0.3s ease;
+  transition: width 0.4s ease;
 }
 
-.menu li a:hover::after {
+.desktop-menu li a:hover::after {
   width: 100%;
 }
 
-/* Mobile Styles */
+/* ===== Menu Toggle ===== */
+#menu-toggle {
+  display: none;
+}
+
 .menu-icon {
   display: none;
   font-size: 26px;
   cursor: pointer;
   color: navy;
+  z-index: 1002;
 }
 
-#menu-toggle {
+.menu-icon .open-icon {
+  display: inline;
+}
+
+#menu-toggle:checked + .menu-icon .open-icon {
   display: none;
 }
 
+/* ===== Side Menu (Mobile) ===== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  max-width: 320px;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #e6f2f0, #ffffff);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu-toggle:checked + .menu-icon + .side-menu {
+  right: 0;
+}
+
+.close-icon {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 28px;
+  cursor: pointer;
+  color: navy;
+  margin-bottom: 20px;
+}
+
+/* ===== Mobile Menu ===== */
+.menu {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+/* === Slide-in Fade Animation for Mobile === */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #4c4e4eef;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
+  .animate-link {
+    animation: slideFadeIn 0.5s ease forwards;
   }
 
-  #menu-toggle:checked + .menu-icon + .menu {
-    max-height: 300px;
-    border-top: 1px solid #ccc;
+  .animate-delay-1 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-2 {
+    animation-delay: 0.4s;
+  }
+}
+
+/* ===== Join Us Text ===== */
+.join-us {
+  font-size: 20px;
+  color: #444;
+  margin: 5px 0 0;
+}
+
+/* ===== Social Media Buttons Centered ===== */
+.social-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-links a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-links a.facebook {
+  background-color: #1877F2;
+}
+
+.social-links a.youtube {
+  background-color: #FF0000;
+}
+
+/* ===== Get in Touch Button Style ===== */
+.get-in-touch {
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background-color: #03a18a;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  border: 2px solid gold;
+}
+
+.get-in-touch:hover {
+  background-color: #028674;
+  color: #fff;
+}
+
+/* ===== Responsive Rules ===== */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
   }
 
   .menu-icon {
     display: block;
-  }
-
-  .menu li {
-    text-align: center;
-    padding: 8px 0;
-  }
-  .menu li:last-child a {
-     padding: 12px 20px;
-  }
-}
-@media(max-width: 400px){
-  .menu li{
-    padding: 0px;
-    
   }
 }
 
@@ -634,7 +759,8 @@ ul.animated-list li.show {
         padding-bottom: 8px;
     }
 
-   .end-section {
+
+.end-section {
   overflow-anchor: none;
   padding: 2rem 1rem;
   background-color: white;
@@ -659,12 +785,12 @@ ul.animated-list li.show {
   animation: slideIn 0.6s ease forwards;
   animation-play-state: paused;
   display: none;
-  margin: 0 0 0.4rem 0;          
+  margin: 0 0 0.4rem 0;           /* Small bottom spacing only */
  padding-bottom: 8px;
-  line-height: 1.45;              
+  line-height: 1.45;              /* Tighter than default */
   white-space: normal;
   overflow-anchor: none;
-  font-size: 18px;                
+  font-size: 18px;                /* ✅ Comfortable and readable */
 }
 
 .end p.show {
@@ -830,6 +956,46 @@ ul.animated-list li.show {
   background-color: #0056b3;
 }
 
+
+.form-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.custom-btn {
+  display: inline-block;
+  background-color: navy;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  text-align: center;
+  min-width: 150px;
+}
+
+.custom-btn:hover {
+  background-color: #001f4d;
+  color: gold;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .custom-btn {
+    width: 100%;
+    max-width: 300px;
+    font-size: 14px;
+  }
+}
+
+
 .social{
   display:block;
   justify-content: center;
@@ -923,6 +1089,66 @@ iframe {
   border: none;
 }
 
+
+/* form*/
+  .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .back-button {
+      align-self: flex-start;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: navy;
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+
+    .back-button i {
+      margin-right: 8px;
+    }
+
+    .form-frame-1{
+      width: 100%;
+      max-width: 900px;
+      height: 950px;
+      border: none;
+    }
+    .form-frame-2{
+       width: 100%;
+      max-width: 900px;
+      height: 950px;
+      border: none;
+
+    }
+    .form-frame-3{
+       width: 100%;
+      max-width: 900px;
+      height: 1200px;
+      border: none;
+
+    }
+
+    @media (max-width: 768px) {
+      .form-frame-1{
+        height: 1200px;
+      }
+      .form-frame-2{
+        height: 1200px;
+      }
+      .form-frame-3{
+        height: 1450px;
+      }
+    }
+
   
 .fut{
   width: 100%;
@@ -1008,4 +1234,6 @@ html, body {
   overflow-x: hidden;
   max-width: 100vw;
 }
+
+
 
