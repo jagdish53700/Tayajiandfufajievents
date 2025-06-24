@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="css/img/tital.PNG">
     <link href='https://fonts.googleapis.com/css?family=Alkatra' rel='stylesheet'>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,24 +17,55 @@
 </head>
 <body>
  
-    <nav class="navbar">
-   <div class="logo">
-            <a href="css/img/navlogo1.png"><img src="css/img/navlogo.png"></a>
-        </div>
+      <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="css/img/navlogo1.png">
+        <img src="css/img/navlogo.png" alt="Logo">
+      </a>
+    </div>
 
-
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
+    <!-- Desktop Menu -->
+    <ul class="desktop-menu">
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="pages/contact.html">Contact</a></li>
     </ul>
+
+    <!-- Hamburger Menu Icon -->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">
+      <i class="fa-solid fa-bars open-icon"></i>
+    </label>
+
+    <!-- Mobile Side Menu -->
+    <div class="side-menu">
+      <!-- Close Button -->
+      <label for="menu-toggle" class="close-icon">
+        <i class="fa-solid fa-xmark"></i>
+      </label>
+      <ul class="menu">
+   <li><a href="index.html" class="animate-link animate-delay-1">Home</a></li>
+  <li><a href="pages/contact.html" class="animate-link animate-delay-2">Contact</a></li>
+  <li class="join-us">Join us</li>
+
+  <li class="social-links">
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+  </li>
+
+  <li>
+    <a href="pages/getintouch.html?from=index&openmenu=true" class="get-in-touch">Get in Touch</a>
+  </li>
+</ul>
+    </div>
   </nav>
 
   <div class="logo1">
 <img src="css/img/Tayaji Fufaji Logo.jpg" alt="logo">
 </div>
+
+
 
  <div class="slider">
         <div class="list">
@@ -100,7 +132,7 @@
     <button class="pearl-button">And Many More</button>
   </div>
 
-   <div class="video">
+  <div class="video">
   <video controls autoplay muted loop playsinline>
     <source src="css/img/TF team video.webm" type="video/webm">
   </video>
@@ -129,7 +161,7 @@
       <h3>ISHAN JAJU</h3>
       <p>Janvi and Manan from Tayaji and Fufaji went above and beyond seamlessly blending professionalism with a family touch to make our wedding an absolute fairy tale. Their attention to detail and personalized approach ensured an unforgettable experience that exceeded all expectations.</p>
     </div>
-   <div class="card">
+    <div class="card">
    <h3>Dr chanchal</h3>
     <p>Both janvi and Manan take all the possible efforts to make our special day memorable. They both put in all their hearts and souls to make the event a grand success. highly recommended</p>
 </div>
@@ -252,6 +284,7 @@
 
 
 
+
 <footer class="fut"></footer>
 
 
@@ -264,7 +297,8 @@
 <script src="js/list.js"></script>
 <script src="js/button.js"></script>
 <script src="js/end.js"></script>
-<script src="js/about.js"></script> 
+<script src="js/about.js"></script>
+<script src="js/smartback.js"></script>
 
 
 
