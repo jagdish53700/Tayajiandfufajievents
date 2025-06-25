@@ -1,3 +1,4 @@
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
   background: #fff;
   overflow-x: hidden !important;
   max-width: 100vw !important;
+  scroll-behavior: smooth;
 
 }
 
@@ -335,7 +337,7 @@ h1{
 .plan{
    text-transform: capitalize;
     font-weight:1000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Alkatra;
     margin-top: 1.5rem;
     font-size: 50px;
     color: navy;
@@ -345,7 +347,7 @@ h1{
 .service{
     text-transform: capitalize;
     font-weight:1000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: Alkatra;
     margin-top: 1.5rem;
     font-size: 50px;
     color: navy;
@@ -355,7 +357,7 @@ h1{
 .client{
     text-transform: capitalize;
     font-weight:1000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Alkatra;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     font-size: 50px;
@@ -412,10 +414,40 @@ h1{
       font-family: Alkatra;
     }
 
+    .stars {
+  color: gold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+
     .card p {
       font-size: 0.9rem;
       color: #222;
     }
+
+    .view-more-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  border: 2px solid navy;
+  background-color: gold;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+    .view-more-button {    
+  padding: 12px 24px;
+  background-color: gold;
+  color: navy;
+  border: 2px solid navy;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
 
     .card.active {
       transform: translateX(-50%) scale(1);
@@ -679,7 +711,7 @@ img {
 .us{
   text-transform: capitalize;
     font-weight:1000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Alkatra;
     margin-bottom: 1.5rem;
     font-size: 50px;
     color: navy;
@@ -747,7 +779,7 @@ ul.animated-list li.show {
     .about{
         text-transform: capitalize;
     font-weight:1000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: Alkatra;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     font-size: 50px;
@@ -1149,6 +1181,63 @@ iframe {
       }
     }
 
+
+   .review-heading {
+  text-align: center;
+  color: navy;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Alkatra;
+}
+
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.review-card {
+  background: #fff;
+  border: 3px solid gold;
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-card h3 {
+  color: navy;
+  margin-bottom: 8px;
+  text-transform: uppercase; /* <- Makes name uppercase */
+  font-family: Alkatra;
+}
+
+.rating {
+  font-size: 18px;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    width: 90%;
+  }
+}
+
   
 .fut{
   width: 100%;
@@ -1234,6 +1323,4 @@ html, body {
   overflow-x: hidden;
   max-width: 100vw;
 }
-
-
 
