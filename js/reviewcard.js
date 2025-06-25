@@ -62,7 +62,7 @@ fetch(SHEET_CSV_URL)
       // Skip if any required value is missing
       if (!name || !message || isNaN(rating)) return;
 
-      if (rating >= 3) {
+      if (rating >= 4) {
         const stars = "⭐".repeat(Math.round(rating));
         addReviewCard(name, stars, message);
         validCount++;
