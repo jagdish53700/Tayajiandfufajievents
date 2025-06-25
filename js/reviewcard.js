@@ -9,31 +9,31 @@ const customReviews = [
   },
   {
     name: "bhagyashree bohra",
-    message: "They took care of managing everything and they did it so well..."
+    message: "They took care of managing everything and they did it so well.. My child's first birthday was a very special event for us and they did it very well and Janvi is such a people friendly person that I am still connected with her and she gave that comfort feeling that they will manage and do things for us as we desire. Thanks for all the efforts guys. You really do a great job!"
   },
   {
     name: "Sarita Bhimsaria",
-    message: "Tayaji And Fufaji Events is an excellent service..."
+    message: "Tayaji And Fufaji Events is an excellent service with courteous and well-trained professionals. The friendly representatives provide immediate response and attentive service. The reasonably priced options, multiple payment options, and nice arrangements make it a top choice for any event. Their prompt service and attention to detail make them stand out in the industry."
   },
   {
     name: "anurag",
-    message: "Tayaji And Fufaji Events is a top-notch service..."
+    message: "Tayaji And Fufaji Events is a top-notch service with well-trained professionals who deliver exceptional event management. The friendly representatives ensure a smooth and hassle-free experience. I highly recommend their services for any special occasion."
   },
   {
     name: "ISHAN JAJU",
-    message: "Janvi and Manan from Tayaji and Fufaji went above and beyond..."
+    message: "Janvi and Manan from Tayaji and Fufaji went above and beyond seamlessly blending professionalism with a family touch to make our wedding an absolute fairy tale. Their attention to detail and personalized approach ensured an unforgettable experience that exceeded all expectations."
   },
   {
     name: "Dr chanchal",
-    message: "Both Janvi and Manan take all the possible efforts..."
+    message: "Both janvi and Manan take all the possible efforts to make our special day memorable. They both put in all their hearts and souls to make the event a grand success. highly recommended"
   },
   {
     name: "samta kasat",
-    message: "They work their hearts out to provide the best arrangements..."
+    message: "They work their hearts out to provide you with the best of the arrangements and make sure you love them.<"
   },
   {
     name: "SHRUTI SARDA",
-    message: "They understand what you actually desire and deliver it..."
+    message: "They understand what you actually desire of and delivers what you have imagined.. would love to avail their services again.. thank you for such a wonderful experience."
   }
 ];
 
