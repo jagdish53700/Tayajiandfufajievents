@@ -1193,10 +1193,10 @@ iframe {
 }
 
 .review-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
+  align-items: stretch;
 }
 
 .review-card {
@@ -1208,7 +1208,12 @@ iframe {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* This ensures height adjusts to content */
 }
+
 
 .review-card:hover {
   transform: translateY(-5px);
